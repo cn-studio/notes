@@ -1,0 +1,133 @@
+@import 'reset';
+@import 'layout';
+@import 'color';
+@import 'fonts';
+
+*{
+    color:rgb(50, 50, 50);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body{
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+.content{
+    @include m-x(4rem,4rem);
+    @include m-y(5rem,5rem);
+}
+
+//項目標題
+h3{
+    @include m-y(2rem,2rem);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+//單元
+h5{
+    @include m-y(1.25rem,1.25rem);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $deep-green;
+}
+
+//內容
+p{
+    @include m-y(0.5rem,0.5rem);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+//括號內說明
+b{
+    font-style: italic;
+}
+
+//特殊說明
+i{
+    @include m-y(0.5rem,0.5rem);
+    color: $blue;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+//備註
+mark{
+    @include m-y(0.5rem,0.5rem);
+    background: none;
+    color: $red;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    display: block;
+}
+
+//強調
+span{
+    color:$blue;
+}
+
+//外部連結
+.link{
+    font-weight: bold;
+    color: $blue;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.link:hover{
+    color: $purple;
+}
+
+//收合項目
+.show{
+    cursor: pointer;
+    display: block;
+}
+.close-area{
+    display: none;
+}
+
+//所有筆記連結
+.others{
+    width:100%;
+    transition: 0.5s;
+    background-color: $white;
+    box-shadow: 0px 0px 10px $light-gray;
+    @include border-box;
+    @include fixed(none, -90%, 0, none, auto);
+    nav{
+        @include flex-row;
+        ul li{
+            width:100%;
+            a{
+                display: block;
+                position: relative;
+                @include p-y(1rem, 1rem);
+                @include text-center;
+            }
+        }
+        ul:first-child{
+            width: 10%;
+            @include flex-row;
+        }
+        ul:last-child{
+            width:90%;
+            @include flex-row;
+            li:first-child a{
+                border-left: 1px solid $light-gray;
+            }
+        }
+        ul li, ul li a{
+            transition: 0.5s;
+        }
+    }
+}
+
+.others ul li:hover{
+    background-color: $deep-gray;
+}
+.others ul li:hover a{
+    color: $white;
+}

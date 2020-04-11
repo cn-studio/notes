@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Git</title>
+    <link rel="icon" href="images/c.n.ico">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--測試用字型-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>Git</h3>
+
+        <h5>運作流程</h5>
+        <p>開啟資料夾-建立檔案-建立數據庫-(init)-工作目錄-(add)-索引-(commit)-本地數據庫-(push)-遠端數據庫-(clone)-回傳至本地數據端
+            <br>須配合Gitub使用</p>
+
+        <h5>環境設定(只需設定一次)</h5>
+        <p>git config --global user.email"使用者信箱帳號"<b>(使用者信箱)</b></p>
+        <p>git config --global user.name"使用者名稱"<b>(使用者名稱)</b></p>
+        <p>git config --global user.name"使用者名稱"<b>(使用者名稱)</b></p>
+
+        <h5>基礎操作</h5>
+        <p>cd 路徑，<i>範例 : cd/test/css</i><b>(移動至css資料夾內，可直接拖曳資料夾進git視窗介面中)</b></p>
+        <p>cd ..<b>(回上一層)</b></p>
+        <p>ls<b>(展開當前所在位置的所有資料夾）</b></p>
+        <p>touch 檔案名稱，<i>範例touch index.html</i><b>(建立新資料夾)</b></p>
+        <p>mkdir 資料夾名稱，<i>範例 :mkdir css</i><b>(開啟css的資料夾)</b></p>
+
+        <h5>數據庫建立</h5>
+        <p>git init<b>(確認當前位置正確後輸入，出現<span>master</span>字樣完成)</b></p>
+
+        <h5>加入索引</h5>
+        <p>git add .<b>(新增所有檔案至索引)</b></p>
+        <p>git add 檔名，<i>範例 : git add test.txt</i><b>(加入某個檔案至索引，需加入檔名與副檔名)</b></p>
+        <p>git status<b>(檢視狀態)</b></p>
+        <p>狀態註解 : modified<b>(經過編輯)</b></p>
+
+        <h5>忽略檔案</h5>
+        <p>gitignore "忽略此檔案內所記錄的檔案"<b>(將含副檔名的檔案輸入，並儲存)</b></p>
+        <p>在此檔案內輸入:
+            <br>檔名.副檔名<b>(忽略此檔案)</b>
+            <br>*.副檔名<b>(忽略此副檔名的全部檔案)</b>
+            <br>資料夾名稱/<b>(忽略此資料夾內的所有檔案)</b>
+            <br><mark>此檔案也需要加入索引、以及提交更新</mark>
+        </p>
+
+        <h5>取消索引</h5>
+        <p>git reset HEAD<b>(全部檔案取消索引)</b></p>
+        <p>git reset HEAD 檔名，<i>範例 : git reset HEAD text.txt</i><b>(全部檔案取消索引)</b></p>
+
+        <h5>還原檔案</h5>
+        <p>git checkout<b>(單一檔案到最新<span>commit</span>狀態)</b></p>
+        <p>git reset --hard<b>(還原工作目錄與索引至最後一次<span>commit</span>狀態)</b></p>
+
+        <h5>將遠端回傳至本地數據</h5>
+        <p>git clone github上的網址<b>(下載檔案)</b></p>
+
+        <h5>將本地數據上傳至遠端數據</h5>
+        <p>git push<b>(需先經過git clone流程)</b></p>
+        <p>git push -set-upstream origin 分支名稱<b>(上傳分支)</b></p>
+        <p>git push origin 分支名稱，<i>範例 : git push origin master</i><b>(<span>origin</span>為預設遠端主機名稱)</b></p>
+
+        <h5>分支</h5>
+        <p>HEAD : 目前所在的位置指標</p>
+        <p>git branch<b>(瀏覽目前分支)</b></p>
+        <p>git branch 名稱<b>(創立一個新分支)</b></p>
+        <p>git branch -d 名稱<b>(移除某個分支)</b></p>
+        <p>git checkout前四碼<b>(回到某個<span>commit</span>狀態)</b></p>
+        <p>git checkout 名稱<b>(將<span>HEAD</span>移動到此分支)</b></p>
+        <p>git checkout master<b>(回到預設的分支)</b></p>
+
+        <h5>合併</h5>
+        <p>git merge 分支名稱<b>(與<span>master</span>進行合併)</b></p>
+        <mark>當分支與master記錄點不同時，可合併為同一紀錄點</mark>
+
+        <h5>衝突解決</h5>
+        <p>衝突顯示</p>
+        <i>
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;......&lt;/h1&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=======(等號上方是原本branch的程式碼，等號下方是要合併分支的程式碼)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;......&lt;/h1&gt;
+            <br>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 分支名稱
+        </i>
+        <mark>完成後需要手動add與commit</mark>
+
+        <h5>標籤</h5>
+        <p>git tag<b>(查詢標籤)</b></p>
+        <p>git tag -n<b>(查詢詳細標籤)</b></p>
+        <p>git tag -d 標籤名稱<b>(刪除標籤)</b></p>
+        <p>git tag -am "備註內容" 標籤名稱<b>(新增標籤備註)</b></p>
+        <p>git checkout 名稱<b>(將<span>HEAD</span>移動到此分支)</b></p>
+        <p>git checkout 標籤名稱<b>(將<span>HEAD</span>切換到該標籤)</b></p>
+
+        <h5>暫存</h5>
+        <p>git stash<b>(暫時儲存當前目錄)</b></p>
+        <p>git stash list<b>(瀏覽git stash列表)</b></p>
+        <p>git stash pop<b>(還原暫存)</b></p>
+        <p>git stash drop<b>(清除最新暫存)</b></p>
+        <p>git stash clear<b>(清除全部暫存)</b></p>
+        <mark>git status無法查詢此類型狀態
+            <br>臨時處理其他專案時，檔案尚未完成，可使用此功能
+        </mark>
+
+        <h5>推送分支至遠端</h5>
+        <p>git remote<b>(查詢遠端數據庫)</b></p>
+        <p>git remote rename origin 修改的名稱<b>(重新命名遠端數據庫)</b></p>
+        <mark>origin為預設遠端主機名稱</mark>
+
+        <h5>下載遠端數據庫</h5>
+        <p>git pull<b>(拉資料至工作目錄)</b></p>
+        <mark>當github更新紀錄與本地端不符時<br>需先git pull下載遠端資料<br>才能進行git push</mark>
+
+        <h5>Github 線上平台</h5>
+        <p>New repository<b>(右上角 + 號的下拉選單，創立遠端資料庫)</b></p>
+    </div>
+</body>
+
+</html>

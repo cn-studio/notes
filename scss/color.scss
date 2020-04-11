@@ -1,0 +1,95 @@
+//黑色
+$black:rgb(25, 25, 25);
+
+//深灰色
+$deep-gray: rgb(80, 80, 80);
+
+//灰色
+$gray:rgb(150, 150, 150);
+
+//亮灰色
+$light-gray: rgb(200, 200, 200);
+
+//白色
+$white:rgb(245, 245, 245);
+
+//主色調
+$main-color:rgb(20, 155, 75);
+
+//主色互動效果
+$main-color-effect: $main-color/1.75;
+
+//副色調
+$other-color:rgb(150, 120, 250);
+
+//副色調互動效果
+$other-color-effect: $other-color/1.75;
+
+//紅色
+$red:rgb(225, 35, 35);
+
+//粉紅色
+$pink: rgb(250, 120, 250);
+
+//橘色
+$orange: rgb(255, 165, 5);
+
+//黃色
+$yellow: rgb(230, 222, 0);
+
+//米黃色
+$beige: rgb(230, 205, 155);
+
+//綠色
+$green: rgb(40, 210, 65);
+
+//深綠色
+$deep-green: rgb(20, 155, 75);
+
+//藍綠色
+$blue-green: rgb(45, 210, 190);
+
+//藍色
+$blue: rgb(45, 70, 240);
+
+//青藍色
+$light-blue:rgb(40, 150, 255);
+
+//紫色
+$purple: rgb(115, 25, 235);
+
+//桃紅色
+$peach:  rgb(220, 60, 200);
+
+//透明色
+$opacity-color: rgba(245, 245, 245, 0);
+
+//淡出效果
+@mixin fade-in($opacity){
+    visibility: hidden;
+    opacity: $opacity;
+}
+//淡入效果
+@mixin fade-out($opacity) {
+    visibility: visible;
+    opacity: $opacity;
+}
+
+//立體效果
+@mixin threeD($top, $middle, $down, $bottom){
+    background: linear-gradient(
+        $top 0%,
+        $middle 10%,
+        $down 90%,
+        $bottom 100%,
+    );
+    box-shadow: 0 0 10px $gray;
+}
+
+//漸層效果
+@mixin colors($top, $bottom) {
+    background: linear-gradient(
+        $top 0%,
+        $bottom 100%,
+    )
+}

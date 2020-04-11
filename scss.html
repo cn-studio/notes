@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCSS</title>
+    <link rel="icon" href="images/c.n.ico">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--測試用字型-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>SCSS</h3>
+
+        <h5>環境設定</h5>
+        <p>因SASS/SCSS需經過編譯處理，詳見 <a href="https://medium.com/@enshenghuang/%E4%BD%BF%E7%94%A8vscode%E5%A4%96%E6%8E%9B%E8%87%AA%E5%8B%95%E7%B7%A8%E8%AD%AFsass-scss-9ff768d23b48" target="_blank" class="link"> 設定方法 </a></p>
+        <h5>註解撰寫</h5>
+        <i>.header{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:100px
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ul{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:200px;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            <br>}</i>
+        <mark>class="header"的高度100px,.header ul的高200px</mark>
+
+        <h5>變數撰寫</h5>
+        <p>支援+ - *等數學符號</p>
+        <p>$maincolor:rgb(245, 245, 245)<b>($名稱 : 屬性)</b></p>
+        <i>.header{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:$maincolor;
+            <br>}
+        </i>
+        <mark>可直接將$maincolor帶入屬性</mark>
+
+        <h5>檔案拆解</h5>
+        <p>@import "檔案名稱"<b>可在scss中帶入另一隻scss的檔案</b></p>
+        <mark>@improt 'reset';</mark>
+
+        <h5>工具 | mixin</h5>
+        <p>@mixin 自訂名稱($變數名稱, $變數名稱)<b>(可自行定義的快速工具包)</b></p>
+        <i>@mixin test($height, $width){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: $height;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: $width;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 0;
+            <br>}
+        </i>
+        <mark>需要用@include參數進行調用</mark>
+
+        <h5>工具調用 | include</h5>
+        <p>@include 名稱<b>(名稱為 mixin 所定義的參數)</b></p>
+        <i>ul {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: $maincolor;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include test(100vh, 100vw);
+            <br>}
+        </i>
+        <mark>ul此標籤的高 = 100vh, 寬 = 100vw</mark>
+        <mark>需與@mixin 進行搭配</mark>
+
+        <h5>載具 | content</h5>
+        <p>@content <b>帶入客製化內容</b></p>
+        <mark>開設一個RWD斷點檔案(_screen.scss)</mark>
+        <i>@mixin pad{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@media (max-width: 768px){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@content
+            <br>}
+        </i>
+        <mark>回到主要的css樣式中</mark>
+        <i>@import ‘screen’; (並帶入此檔案)
+        <br>body{
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include pad(){
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(10, 10, 10);
+        <br>};
+        </i>
+        <mark>在@mixin pad所定義的寬度下，背景會改變顏色);</mark>
+
+        <h5>偽元素</h5>
+        <i>
+            ul{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&:after{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.......
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            <br>}
+        </i>
+        <p>&:after{...} <b>(相同於 css中的::after)</b></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Html</title>
+    <link rel="icon" href="images/c.n.ico">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--測試用字型-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>Html</h3>
+
+        <h5>網頁設定</h5>
+        <i>
+            &lt;!DOCTYPE html&gt; <b>(html5版本)</b>
+            <br>&lt;html&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="Content-Type" content="text/html";
+            charset=UTF-8"&gt; <b>(萬國編碼)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;網站標題&lt;/title&gt; <b>(網站標題)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="dcscription" content="敘述"&gt; <b>(網站描述文字)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="keywords" content="關鍵字1,關鍵字2,關鍵字3"&gt; <b>(網站描述文字)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta property="og:title" content="FB的標題"&gt; <b>(FB相關)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta property="og:description" content="FB的描述"&gt; <b>(FB相關)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta property="og:typel" content="website"&gt; <b>(FB相關)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta property="og:url" content="FB上的網址"&gt; <b>(FB相關)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta property="og:image" content="分享至FB所呈現的圖片"&gt; <b>(FB相關)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=Eege"&gt; <b>(將使用者的ie變更為最新)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; <b>(RWD設定) (瀏覽器顯示寬度=裝置的寬度)，(縮放比例為1)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="mystyle.css"&gt; <b>(外部連結CSS)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="shortcut icon" href="image/title_icon.ico"&gt; <b>(網頁名稱前圖示)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </i>
+
+        <h5>清單</h5>
+        <i>&lt;ul&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;
+            <br>&lt;/ul&gt;
+        </i>
+        <mark>ul為無數字順序類型，ol有數字順序類型</mark>
+
+        <h5>描述型清單</h5>
+        <i>&lt;dl&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;&lt;/dt&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;&lt;/dd&gt;
+            <br>&lt;/dl&gt;
+        </i>
+        <mark>描述型情單 dl為容器最外層，dt為左欄的敘述，dd為右欄的敘述</mark>
+
+        <h5>特殊標籤</h5>
+        <p>&lt;header&gt;&lt;/header&gt; <b>(可用於網頁標題)</b></p>
+        <p>&lt;nav&gt;&lt;/nav&gt; <b>(選單列表)</b></p>
+        <p>&lt;main&gt;&lt;/main&gt; <b>(主要內容)</b></p>
+        <p>&lt;section&gt;&lt;/section&gt; <b>(內容區)</b></p>
+        <p>&lt;article&gt;&lt;/article&gt; <b>(文章)</b></p>
+        <p>&lt;footer&gt;&lt;/footer&gt; <b>(頁尾)</b></p>
+
+        <h5>超連結</h5>
+        <p>&lt;a&gt;&lt;/a&gt; <b>(可用於網頁標題)</b></p>
+        <p>&lt;a href="目標" target="_blank" title="連結顯示文字"&gt;&lt;/a&gt; <b>(超連結)</b></p>
+        <p>&lt;a href="#test"&gt;&lt;/a&gt; <b>(連結至該檔案id為test的元件)</b></p>
+        <mark>target="_blank" 設定此屬性時，點擊後會開啟新視窗</mark>
+
+        <h5>文字相關</h5>
+        <p>&lt;mark&gt;&lt;/mark&gt; <b>(增加背景色)</b></p>
+        <p>&lt;del&gt;&lt;/del&gt; <b>(文字刪除線的內容)</b></p>
+        <p>&lt;s&gt;&lt;/s&gt; <b>(不準確的內容)</b></p>
+        <p>&lt;ins&gt;&lt;/ins&gt; <b>(補充的內容)</b></p>
+        <p>&lt;u&gt;&lt;/u&gt; <b>(文字下底線)</b></p>
+        <p>&lt;small&gt;&lt;/small&gt; <b>(小文字)</b></p>
+        <p>&lt;strong&gt;&lt;/strong&gt; <b>(強調字-粗體字)</b></p>
+        <p>&lt;b&gt;&lt;/b&gt; <b>(粗體字)</b></p>
+        <p>&lt;i&gt;&lt;/i&gt; <b>(斜體字)</b></p>
+        <p>&lt;em&gt;&lt;/em&gt; <b>(斜體字)</b></p>
+
+        <h5>表格</h5>
+        <i>&lt;table&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;/th&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;/th&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;/th&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+        </i>
+        <mark>th為欄位標題，td為欄位資料</mark>
+
+        <h5>其他屬性</h5>
+        <p>&lt;br&gt; <b>(強制換行)</b></p>
+        <p>&lt;&amp;nbsp;&gt; <b>(空白字元)</b></p>
+        <p>&lt;audio src="來源" controls autoplay loop&gt; <b>(音源)</b></p>
+        <mark>controls(介面) autoplay(自動播放) loop(循環)</mark>
+        <p>&lt;video src="來源"&gt; <b>(影像)</b></p>
+        <mark>網址需放影片上的”崁入”內的程式碼內容</mark>
+
+        <h5>自定義參數</h5>
+        <p>&lt;p&gt; data-test="1" </p>
+        <mark>data-後方的參數名稱，與參數內的數值可自定義</mark>
+
+        <h5>表單元件</h5>
+        <i>
+            &lt;form action="導入的資料庫位置"&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mail"&gt;電子郵件&lt;/label&gt; <b>(<span>for</span>內的數值與<span>input</span>的<span>name</span>呼應，可提高使用者體驗)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="mail"&gt; <b>(輸入的種類是<span>文字</span>，資料庫的名稱為<span>mail</span>)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="tel" &gt; <b>(輸入的種類是<span>數字</span>)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="mail" &gt; <b>(輸入的種類是<span>信箱</span>)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="下一步"&gt; <b>(輸入的種類是<span>按鈕</span> <span>value="按鈕上的文字描述"</span>)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="sex" value="man"&gt; <b>(單選元件)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="sex" value="women"&gt; <b>(單選元件)</b>
+            <mark>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;單選方塊，同一欄元件當<span>參數name</span>相同時，只能選擇一個元件</mark>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="movie" value="hobby"&gt; <b>(複選元件)</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="music" value="hobby"&gt; <b>(複選元件)</b>
+            <mark>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;複選方塊，同一欄元件下可勾選多格條件</mark>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select name="birth"&gt; 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="1991"&gt;1991&lt;/option&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="1992"&gt;1992&lt;/option&gt;  
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt; 
+            <mark>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此為多選型下拉式選單，<span>value</span>為後端應用參數</mark>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea name="content" cols="30" row="10"&gt; <b>(多行文字輸入區，cols=單行文字量，row="行數")</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;&lt;/button&gt; <b>(按鈕元件)</b>
+            <mark>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input placeholder="請輸入電子郵件"&gt;(placeholder可輸入提示的內容)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input readonly&gt;(僅能閱讀不能填寫)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input disabled&gt;(無法選取)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldest disabled&gt;&lt;/fieldest&gt;(全表單禁用)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
+            </mark>
+        </i>
+    </div>
+</body>
+</html>

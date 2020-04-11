@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JQuery</title>
+    <link rel="icon" href="images/c.n.ico">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--測試用字型-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>JQuery</h3>
+
+        <h5>範例寫法</h5>
+        <i>$(document).ready(function(){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('h1').click(function(event){
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('p').toggle(1000);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+            <br>});</i>
+        <mark>第一行-當文件準備完成時</mark>
+        <mark>第二行-當&lt;h1&gt;被點擊時</mark>
+        <mark>第三行-&lt;p&gt;標籤內的文章會隱藏/顯示(持續1秒)</mark>
+        <p>$('#id') <b>(指向id)</b></p>
+        <p>$(''.class') <b>(指向class)</b></p>
+        <p>$('p:first') <b>(指向p的第一個項目)</b></p>
+        <p>$('p.class') <b>(指向p中的class)</b></p>
+
+        <h5>範例寫法</h5>
+        <i>$(document).ready(function(){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('h1').click(function(event){
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).toggle(1000);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+            <br>});
+        </i>
+        <p>第三行$(this) <b>(指向上一層指定元素h1)</b></p>
+
+        <h5>動態新增元素</h5>
+        <mark>動態增加span元素</mark>
+        <i>$('div').on('click',function(){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).parent('body').append('&lt;span&gt;123&lt;/span&gt;')
+            <br>})</i>
+        <mark>動態移除剛剛新增的span元素</mark>
+        <i>$('body').on('click','span',function(){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).remove();
+            <br>})</i>
+
+        <h5>註解</h5>
+        <p>//單行註解 <b>(雙斜線後方程式碼隱藏不執行)</b></p>
+        <p>/**/ 範圍註解 <b>(/*符號內的內容全隱藏不執行*/)</b></p>
+
+        <h5>鍊式語法</h5>
+        <i>.css('border:1px solid #000').fadeout(1000)</i>
+        <mark>先執行border屬性，再淡出</mark>
+
+        <h5>效果屬性</h5>
+        <p>hide(0) <b>(隱藏)</b></p>
+        <p>show(0) <b>(顯示)</b></p>
+        <p>toggle(0) <b>(切換顯示/隱藏)</b></p>
+        <p>fadeIn(0) <b>(淡入)</b></p>
+        <p>fadetoggle(0) <b>(切換淡入/淡出)</b></p>
+        <p>slideDown(0) <b>(由上向下滑出)</b></p>
+        <p>slideUp(0) <b>(由下向上滑出)</b></p>
+        <p>slideToggle(0) <b>(切換滑入/滑出)</b></p>
+
+        <h5>動畫屬性</h5>
+        <p>animate({left: 250px}); <b>(向左移動250px)</b></p>
+        <p>animate({left: 250px,opacity: 0.75}); <b>(向左移動，且透明度轉為0.75)</b></p>
+        <p>animate({width: toggle}); <b>(切換寬度由原始設定變為0)</b></p>
+        <p>animate({width: toggle},(1000)); <b>(切換寬度由原始設定變為0，持續1秒)</b></p>
+
+        <h5>暫停</h5>
+        <p>stop() <b>(中斷執行)</b></p>
+
+        <h5>延遲</h5>
+        <p>delay(1000) <b>(延遲1秒執行)</b></p>
+
+        <h5>事件屬性</h5>
+        <p>.alert() <b>(警告視窗)</b></p>
+        <p>.blur <b>(滑鼠點擊後，離開時)</b></p>
+        <p>.click <b>(點擊)</b></p>
+        <p>.Dbclick <b>(雙擊)</b></p>
+        <p>.keydown <b>(按鍵內容輸入時)</b></p>
+        <p>.keyup <b>(按鍵輸入後，並放開按鍵)</b></p>
+        <p>.mouseenter <b>(滑鼠移入時)</b></p>
+        <p>.mouseleave <b>(滑鼠移出時)</b></p>
+        <p>.hover <b>(滑鼠游標 移入 & 移出)</b></p>
+        <p>event.pageX <b>(滑鼠在頁面中的 X 座標)</b></p>
+        <p>event.pageY <b>(滑鼠在頁面中的 Y 座標)</b></p>
+
+        <h5>增加/刪除 html</h5>
+        <mark>.append(該段內容結尾插入新內容)</mark>
+        <p>$('p').append('&lt;b&gt;test&lt;/b&gt;') <b>(添加一個粗體字內容，在 p 標籤之後)</b></p>
+        <p>$('p').append('&lt;li&gt;test&lt;/li&gt;') <b>(添加一個li標籤，在 p 標籤之後)</b></p>
+        <mark>.prepend(在開頭插入新內容)</mark>
+        <p>$('p').prepend('&lt;b&gt;test&lt;/b&gt;') <b>(添加一個粗體字內容，在 p 標籤之前)</b></p>
+        <p>$('p').prepend('&lt;li&gt;test&lt;/li&gt;') <b>(添加一個li標籤，在 p 標籤之前)</b></p>
+        <p>$('img').before('&lt;b&gt;Before&lt;/b&gt;') <b>(在img標籤前面插入一個粗體文字內容)</b></p>
+        <p>$('img').after('&lt;b&gt;Before&lt;/b&gt;') <b>(在img標籤後面插入一個粗體文字內容)</b></p>
+        <p>$('div').remove() <b>(刪除div標籤)</b></p>
+
+        <h5>添加/刪除 css</h5>
+        <p>$('div').addClass('blue') <b>(增加class名稱為blue的屬性)</b></p>
+        <p>$('div').addClass('blue fontsize bgcolor') <b>(增加多個class，需以空格進行區隔)</b></p>
+        <p>$('div').removeClass('blue')<b>(移除class名稱為blue的屬性)</b></p>
+        <p>$('div').toggleClass('blue') <b>(增加/移除class名稱為blue的屬性)</b></p>
+        <mark></mark>
+
+        <h5>層數應用</h5>
+        <mark>父項目相關 .parent()</mark>
+        <p>$('span').parent().css({'color':'red','border':'2px'}) <b>(css屬性效果套用到span標籤的所有父層)</b></p>
+        <p>$('span').parent('ul') <b>(span標籤的所有父層ul標籤)</b></p>
+        <p>$('span').parentaUntil('div') <b>(套用到span與div之間的所有父層)</b></p>
+        <mark>子項目相關 .child()</mark>
+        <p>$('span').child() <b>(span標籤的子項目隱藏)</b></p>
+        <p>$('span').child('h1') <b>(span標籤的所有子項目h1標籤)</b></p>
+        <p>$('div').find('span') <b>(div標籤到span標籤的所有子項目)</b></p>
+        <mark>其他</mark>
+        <p>$('span').siblings() <b>(與h3標籤同層所有標籤)</b></p>
+        <p>$('span').siblings('p') <b>(與h3標籤同層所有p標籤)</b></p>
+        <p>$('span').next() <b>(與h3標籤同層的下一個標籤)</b></p>
+        <p>$('span').nextAll() <b>(與h3標籤同層，並排在h3之後的所有標籤)</b></p>
+        <p>$('span').nextUntil('h3') <b>(span標籤到h3的所有同層標籤)</b></p>
+        <p>$('div').first('p') <b>(div標籤內的第一個p標籤)</b></p>
+        <p>$('div').last('p') <b>(div標籤內的第一個p標籤)</b></p>
+        <mark>js中第一個項目為0</mark>
+        <p>$('p').eq(0) <b>(p標籤的第一個項目)</b></p>
+        <p>$('p').filter('.test') <b>(p標籤中class名稱為.test的物件)</b></p>
+        <p>$('p').not('.test') <b>(p標籤中class名稱為.test以外的物件)</b></p>
+
+        <h5>延伸應用</h5>
+        <mark>瀏覽器封鎖滑鼠右鍵</mark>
+        <i> $(document).ready(function() {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(document).get(0).oncontextmenu = function() {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};
+            <br>}); </i>
+    </div>
+</body>
+
+</html>

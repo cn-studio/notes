@@ -1,0 +1,254 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Css</title>
+    <link rel="icon" href="images/c.n.ico">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--測試用字型-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>Css</h3>
+
+        <h5>overflow | 卷軸</h5>
+        <p>overflow:hidden <b>(隱藏超出範圍的內容，不產生卷軸)</b></p>
+        <p>overflow:auto <b>(超出範圍的x、y軸會產生選軸)</b></p>
+        <p>overflow:visable <b>(超出範圍不隱藏，不產生卷軸)</b></p>
+        <p>overflow:scroll <b>(超出範圍內容會產生卷軸)</b></p>
+
+        <h5>text | 文字排版</h5>
+        <p>text-indent:'n'px <b>(首行縮排'n'px)</b></p>
+        <p>letter-spacing: 'n'px <b>(文字間距'n'px)</b></p>
+        <p>line-height: 'n'px <b>(文字行距'n'px)</b></p>
+        <p>text-overflow: clipe <b>(超出的範圍直接切斷)</b></p>
+        <p>text-overflow: ellipsis <b>(超出的範圍改為…)</b></p>
+        <i>.ellipsis {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overflow:hidden;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;white-space: nowrap;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-overflow: ellipsis;
+            <br>}
+        </i>
+        <mark>一併設定 white-space: nowrap; 及 text-overflow: ellipsis; 才能呈現此效果</mark>
+        <p>writing-mode: horizontal-tb <b>(預設樣式)</b></p>
+        <p>writing-mode: vertical-rl <b>(由右至左垂直書寫)</b></p>
+        <p>writing-mode: vertical-lr <b>(由左至右垂直書寫)</b></p>
+        
+        <h5>文字換行</h5>
+        <p>word-break: break-all; <b>(超出範圍的"字元"換行)</b></p>
+        <p>word-wrap:break-word; <b>(超出範圍的"單字"換行)</b></p>
+        <p>white-space:pre; <b>(保留原始文件的空白與換行，功能與Html中的<span>&lt;pre&gt;相同</span>)</b></p>
+        <p>white-space:nowrap; <b>(強迫文字不換行)</b></p>
+        <p>white-space:pre-wrap;  <b>(保留所有空白，自動換行)</b></p>
+        <p>white-space: pre-line;  <b>(將多個空白轉換為1個空白)</b></p>
+
+        <h5>font | 文字字體</h5>
+        <p>font-family: Microsoft JhengHei,serif,sans-serif,cursive,fantasy,monospace; <b>( <span>Microsoft JhengHei</span>微軟正黑體</b> )</p>
+        <p>font-style:normal <b>(字體樣式，預設為normal，斜體為<i>italic</i>)</b></p>
+
+        <h5>background-image | 背景圖</h5>
+        <p>background-image:url(路徑) <b>(背景圖片)</b></p>
+        <p>background-size: contain <b>(背景完整呈現)</b></p>
+        <p>background-repeat: repeat<b>(背景重複)</b></p>
+        <p>background-repeat: repeat-x <b>(背景x軸重複)</b></p>
+        <p>background-repeat: repeat-y <b>(背景y軸重複)</b></p>
+        <p>background-attachment: scroll <b>(背景捲動-預設屬性)</b></p>
+        <p>background-attachment: fixed <b>(背景捲動-固定不捲動)</b></p>
+
+        <h5>color | 特殊顏色屬性</h5>
+        <p>color: rgba(0, 0, 0, 0, 0) <b>參數中的'a'是透明度的數值0~1</b></p>
+        
+        <h5>cursor | 游標樣式</h5>
+        <p>cursor: pointer <b>(游標轉換為可點選的樣貌)</b></p>
+        <p>cursor: not-allow <b>(無法點擊)</b></p>
+        <p>cursor: none <b>(無游標)</b></p>
+
+        <h5>display | 排版</h5>
+        <p>display: none <b>(物件不顯示，也不占版面)</b></p>
+        <p>display: inline <b>(項目橫式排列)</b></p>
+        <p>disaply: inline-block <b>(項目橫式排列，且被賦予空間)</b></p>
+        <p>disaply: block <b>(項目直式排列，且被賦予空間)</b></p>
+
+        <h5>float | 浮動排版</h5>
+        <p>float: none <b>(不浮動)</b></p>
+        <p>float: left <b>(向左浮動)</b></p>
+        <p>float: right <b>(向右浮動)</b></p>
+        <p>clear: left <b>(清除向左浮動)</b></p>
+        <p>clear: right <b>(清除向右浮動)</b></p>
+        <p>clear: both <b>(清除左右浮動)</b></p>
+
+        <h5>shadow | 容器陰影</h5>
+        <p>box-shadow: x軸距離 y軸距離 模糊 顏色 inset <b>inset 為內陰影屬性</b></p>
+        <p>text-shadow: x軸距離 y軸距離 模糊 顏色</p>
+
+        <h5>三角形繪圖</h5>
+        <i>width: 0px;
+        <br>border-top: 15px solid transparent;
+        <br>border-left: 25px solid rgb(5, 165, 245);
+        <br>border-bottom: 15px solid transparent;
+        </i>
+
+        <h5>transform | 動態效果</h5>
+        <p>transform: translate(n, n) <b>(x,y軸的移動量)</b></p>
+        <p>transform: scale(n, n) <b>(x,y軸的大小，參數為0~1)</b></p>
+        <p>transform: rotate('n'deg) <b>(選轉的角度)</b></p>
+        <p>transform: skew('n'deg, 'n'deg) <b>(x,y軸傾斜的角度)</b></p>
+        <p>transform: rotate('n'deg) scale(n, n) skew(n, n) <b>(多重屬性)</b></p>
+
+        <h5>transition | 動態時間軸</h5>
+        <p>transition: height 3s 2s, width 3s 2s <b>(高度變化3秒、延遲2秒，寬度變化3秒、延遲2秒)</b></p>
+        <p>transition-property: all <b>(全部有變動的屬性進行變化)</b></p>
+        <p>transition-duration: 2s <b>(持續'2'秒)</b></p>
+        <p>transition-delay: 2s <b>(延遲'2'秒執行)</b></p>
+        <p>transform: rotate('n'deg) scale(n, n) skew(n, n) <b>(多重屬性)</b></p>
+        <p>transition-timing-function: ease <b>(動畫播放速率)</b></p>
+        <i>動畫速率-內建屬性
+            <br>ease (0.25, 0.1, 0.25, 1.0)
+            <br>linear (0.0, 0.0, 1.0, 1.0)
+            <br>ease-in (0.42, 0, 1.0, 1.0)
+            <br>ease-out (0, 0, 0.58, 1.0)
+            <br>ease-in-out (0.42, 0, 0.58, 1.0)
+        </i>
+        <mark>此參數可動態呈現，屬性的數值變化</mark>
+
+        <h5>animation | 動畫參數</h5>
+        <p>@keyframes test <b>(建立一個名為<span>test</span>的動畫參數)</b></p>
+        <i>
+            @keyframes test{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%{width: 0%}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%{width: 25%}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%{width: 50%}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75%{width: 75%}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%{width: 100%}
+            <br>}
+        </i>
+
+        <h5>animation | 動畫代入</h5>
+        <p>animation-name: test <b>(帶入動畫名稱為<span>test</span>的動畫參數)</b></p>
+        <p>animation-duration: 3s <b>(持續3秒)</b></p>
+        <p>animation-delay: 2s <b>(延遲2秒)</b></p>
+        <p>animation-iteration-count: infinte <b>(動畫重複次數，<span>infinte</span>為重複播放)</b></p>
+        <p>animation test 3s 2s  linear infinte <b>(帶入動畫名稱為<span>test</span>的動畫，持續3秒，延遲兩秒，加速度播放，連續播放)</b></p>
+        <p>animation-direction:normal <b>(動畫播放方向 <span>normal</span>:預設模式 <span>reverse</span>:反轉，由100%~0%
+            <br><span>alternate</span>:正反轉輪流播放，奇數次為 0% 到 100%，偶數次為 100% 到 0%，若動畫播放次數只有一次就只會正常播放
+            <br><span>alternate-reverse</span>:alternate 的相反，奇數次為 100% 到 0%，偶數次為 0% 到 100%，若動畫播放次數只有一次就只會反轉播放)</b></p>
+        <p>animation-fill-mode:none <b>(動畫執行後的狀態，預設<span>none</span>:回到初始狀態、<span>forwards</span>:停留在動畫執行完畢的狀態)</b></p>
+
+        <h5>z-index | 圖層順序</h5>
+        <p>z-index: 1 <b>(數字越大，圖層越上層)</b></p>
+
+        <h5>box-sizing | 盒模型</h5>
+        <p>box-sizing: border-box <b>(盒模型本體包含<span>padding</span> 與 <span>border</span>)</b></p>
+
+        <h5>Flex | 排版系統</h5>
+        <mark>啟用此排版系統，需將父層設定display:flex</mark>
+        <mark>row為水平排版</mark>
+        <p>flex-direction: row <b>(由左至右排版-預設值)</b></p>
+        <p>flex-direction: row-reverse <b>(由右至左排版-位向反轉)</b></p>
+        <mark>column為垂直排版</mark>
+        <p>flex-direction: column <b>(由上至下排版)</b></p>
+        <p>flex-direction: column-reverse <b>(由下至上排版-位向反轉)</b></p>
+        <mark>justify-content 子項目的水平排序，當flex-direction:row 才起作用</mark>
+        <p>justify-content: flex-start <b>(由<span>flex-direction</span>定義的起點對齊)</b></p>
+        <p>justify-content: flex-end <b>(由<span>flex-direction</span>定義的終點對齊)</b></p>
+        <p>justify-content: center <b>(水平對齊)</b></p>
+        <p>justify-content: space-around <b>(內外均且留白)</b></p>
+        <mark>align-content 子項目的垂直排序，當flex-direction:culumn 才能起作用</mark>
+        <p>align-items: stretch <b>(垂直撐滿父層高度)</b></p>
+        <p>align-items: flex-start <b>(由<span>flex-direction</span>定義的起點對齊)</b></p>
+        <p>align-items: flex-end <b>(由<span>flex-direction</span>定義的終點對齊)</b></p>
+        <p>align-content: flex-start <b>(由<span>flex-direction</span>定義的起點對齊)</b></p>
+        <p>align-content: flex-end <b>(由<span>flex-direction</span>定義的終點對齊)</b></p>
+        <p>align-content: center <b>(垂直置中)</b></p>
+        <mark>flex-wrap內容物過多的處理方式</mark>
+        <p>flex-warp: no-wrap <b>(內容物不換行-預設)</b></p>
+        <p>flex-wrap: wrap <b>(內容物容量過大會自動換行)</b></p>
+        <p>flex-warp: warp-reverse <b>(自動換行外，位向反轉)</b></p>
+        <h5>Flex | 子項目元件</h5>
+        <mark>flex-grow 內容物的是否自動填滿空格</mark>
+        <p>flex-grow: 0 <b>(不成長-預設)</b></p>
+        <p>flex-grow: 1 <b>(會自動成長)</b></p>
+        <mark>flex-shrink 當內容物撐爆容器後，是否進行縮小</mark>
+        <p>flex-shrink: 0 <b>(不縮小)</b></p>
+        <p>flex-shrink: 1 <b>(縮小-預設)</b></p>
+        <mark>flex-basis 單一區塊寬度</mark>
+        <p>flex-basis:500px <b>(寬度500px)</b></p>
+        <p>flex-basis:50% <b>(寬度50%)</b></p>
+        <p>flex-basis:auto <b>(依照內容寬度呈現-預設值)</b></p>
+        <mark>order 元件排序</mark>
+        <p>order:1 <b>(數字越小，排序越前面)</b></p>
+        <mark>margin 此排版下的間距</mark>
+        <p>margin-right:auto <b>(抓出多餘空間補在右方)</b></p>
+        <p>margin:auto <b>(抓出多餘空間補在上下左右)</b></p>
+        <p>margin:auto 0 <b>(抓出多餘空間補在上下，左右無間距)</b></p>
+        <mark>align-self 物件的對齊方式</mark>
+        <p>align-sleft: stretch <b>(垂直撐滿父項目高度)</b></p>
+        <p>align-sleft: flex-start <b>(由<span>flex-direction</span>定義的起點對齊)</b></p>
+        <p>align-sleft: flex-end <b>(由<span>flex-direction</span>定義的起點對齊)</b></p>
+        <p>align-sleft: center <b>(垂直置中)</b></p>
+
+        <h5>其他應用</h5>
+        <p>position : absolute; clip:rect(0px, 0px, 0px, 0px); <b>(遮色片，<span>absolute</span>為必要屬性，<span>rect(上, 右, 下, 左)</span>)</b></p>
+
+        <h5>a | 超連結</h5>
+        <p>a:link <b>(尚未點擊過的連結)</b></p>
+        <p>a:visited <b>(已點過的連結)</b></p>
+        <p>a:hover <b>(滑鼠滑過該目標)</b></p>
+        <p>a:focus <b>(點擊該元素的狀態)</b></p>
+        <p>a:active <b>(點擊該元素間的狀態)</b></p>
+
+        <h5>項目指定選擇器</h5>
+        <p>h1, h2<b>(h1, h2標籤)</b></p>
+        <p>div h3 <b>(div底下的所有h3標籤)</b></p>
+        <p>div > div <b>(div底下的第一層div屬性)</b></p>
+        <p>div + p <b>(同一層的第一個p元素)</b></p>
+        <p>div ~ p <b>(同一層的所有p元素)</b></p>
+        <p>p:first-child <b>(第一個p元素)</b></p>
+        <p>p:nth-child(3) <b>(第三個p項目)</b></p>
+        <p>p:last-child <b>(最後一個p項目)</b></p>
+        <p>p:nth-child(odd) <b>(p項目的奇數)</b></p>
+        <p>p:nth-child(even) <b>(p項目的偶數)</b></p>
+
+        <h5>權重</h5>
+        <p>標籤定義 <b>(1分)</b></p>
+        <p>Class定義 <b>(10分)</b></p>
+        <p>Id定義 <b>(100分)</b></p>
+        <p>Html行內定義 <b>(1000分)</b></p>
+        <p>!important <b>(color:black <span>!important</span> 最高分)</b></p>
+
+        <h5>RWD | 自適應</h5>
+        <p>@media only screen and (max-width: 1028px) {
+            <br><b>裡面放入該螢幕的樣式-響應式設計語法(當螢幕寬度小於1028時的CSS樣式))</b> 
+            <br>}
+        </p>
+        <p>@media only screen and (min-width: 1028px) {
+            <br><b>裡面放入該螢幕的樣式-響應式設計語法(當螢幕寬度大於1028時的CSS樣式))</b> 
+            <br>}
+        </p>
+        <p>media only screen and (min-width: 1028px)  and (min-width:569px) {
+                <br><b>裡面放入該螢幕的樣式-響應式設計語法(當螢幕寬度大於1028~569時的CSS樣式))</b> 
+                <br>}
+        </p>
+        <mark>
+            桌機常見斷點
+            <br>1440px、1280px、1000px、960px
+            <br>平板常見斷點
+            <br>768px
+            <br>手機常見斷點 
+            <br>767px、414px、375px、320px
+        </mark>
+
+        <h5>單位說明</h5>
+        <p>px <b>(固定數值)</b></p>
+        <p>% <b>(變動數值)</b></p>
+        <p>em <b>(以外層字體大小為基準)</b></p>
+        <p>rem <b>(以html標籤的文字大小為相對單位，當<span>font-size = 16px時2rem = 32px</span>)</b></p>
+        <p>vw.vh <b>(以裝置螢幕為基準，<span>100vh</span> = 裝置螢幕滿版高度，<span>100vw</span> = 裝置螢幕滿版寬度)</b></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript</title>
+    <link rel="icon" href="images/c.n.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!--測試用字型-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>Javascript</h3>
+
+        <mark>檔案中插入js---&lt;script src='位置'&gt;&lt;/script&gt;>
+            <br>放置於&lt;body&gt;標籤前面
+            <br>單行敘述結為須加 ; 進行斷行
+            <br>字串寫法'我是字串'
+            <br>console.log(數值)，可於瀏覽器console中進行解譯
+            <br>ture 是 1 ， false 是 0
+        </mark>
+
+        <h5>變數</h5>
+        <p>var Test = 數值 <b>(宣告一個變數)</b></p>
+        <p>var Number = 3 <b>(變數可為數字)</b></p>
+        <p>var Number = 'Hello' <b>(變數可為字串)</b></p>
+        <p>var Number = ture <b>(變數可為布林值)</b></p>
+        <mark>變數名稱開不能是數字，不能加上符號 - 跟 .</mark>
+        <mark>大小寫有別，不能衝突到javascript的專屬語法</mark>
+
+        <h5>涵式 | function</h5>
+        <p>宣告涵式 <b>無參數</b></p>
+        <mark>先宣告涵式Test，再執行涵式Test</mark>
+        <i>function Test(){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('你好');
+            <br>}</i>
+        <br><i>Test();</i>
+        <p>宣告涵式 <b>無參數</b></p>
+        <i>function Test(one,two,three){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var Total = (one+two+three) *10
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(Total);
+            <br>}</i>
+        <br><i>Test(5, 10, 15);</i>
+        <mark>涵式宣告與執行並無順序</mark>
+
+        <h5>全域&區域變數</h5>
+        <p>全域變數 <b>(涵式外的變數)</b></p>
+        <p>區域變數 <b>(涵式內的變數)</b></p>
+        <i>var total;
+            <br>function Test(one){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total = one *8;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(total);
+            <br>}
+        </i>
+        <br>
+        <i>test(30);</i>
+        <br>
+        <i>console.log(total)</i>
+        <mark>同名稱的變數，涵式內與涵式外無法共用</mark>
+        <mark>但當全域變數設定空值，在區域變數定義變數，仍可將區域變數帶入全域變數</mark>
+
+        <h5>陣列</h5>
+        <p>var test = [x, y, z] <b>(陣列中包含<span>x</span>, <span>y</span>, <span>z</span> 3個參數)</b></p>
+        <p>var test = [ ] <b>(空陣列)</b></p>
+        <p>test.<span>push(5)</span> <b>(在陣列中的最一個位置，新增參數 <span>5</span>)</b></p>
+        <p>test[0] = 10<b>(陣列第一筆參數是 <span>10</span>)</b></p>
+        <p>test<span>.length</span><b>(抓出test有幾筆資料)</b></p>
+        <mark>物件陣列</mark>
+        <i>var tet = {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobs: draw;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age: 18;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;like:['music','movie'];
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;luckynumber: [5, 9, 10];
+            <br>}
+        </i>
+        <p>test.sex = 'male' <b>(在test中，新增<span>sex= 'male'</span>的參數)</b></p>
+
+        <h5>運算子</h5>
+        <p>= <b>(賦予某個參數)</b></p>
+        <p>== <b>(等於)</b></p>
+        <p>!== <b>(不等於)</b></p>
+        <p>=== <b>(功能與 <span>==</span> 相同，但會比較參數型別，如 1 <span>===</span> 1)</b></p>
+        <p>&gt;、&gt;=、&lt;、&lt;= <b>(同數學運算式)</b></p>
+        <p>&& <b>(以及...條件，不限累加次數 <span>test == 1 && test == 2</span>)</b></p>
+        <p>|| <b>(或...條件 <span>test == 1 || test == 2</span>)</b></p>
+        <i>n=i+1 等於 i+=1 等於 i++</i>
+
+        <h5>判斷式</h5>
+        <p>if <b>(判斷式)</b></p>
+        <i>if(條件判斷){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要執行的事件}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要執行的事件
+            <br>}
+        </i>
+        <mark>單一判斷式可單用if，多個判斷式可另外加else if</mark>
+        <p>switch <b>(判斷式)</b></p>
+        <i>switch(參數){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case '參數':
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要執行的事件;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要執行的事件;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+            <br>}
+        </i>
+        <mark>當條件是多項可預期的參數，switch執行效果較好</mark>
+        <mark>default同else，當前條件都沒有滿足時，執行default內的事件</mark>
+
+        <h5>迴圈</h5>
+        <i>for(var i=1; 1&gt;10,i ++){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要執行的事件
+            <br>}
+        </i>
+        <mark>break(當for迴圈滿足條件時，不會再往下執行)</mark>
+        <i> var farmsTotal = farms.length;
+            <br>for(var i=1; 1&gt;farmsTotal,i ++){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(farms[i].chick&lt;50){
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(farms[i].farmer+'的小雞剛好夠');
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;farms[i].chick -= 50;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(farms[i].farmer+'的小雞剩下'+farms[i].chick)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+            <br>}
+        </i>
+
+        <h5>計時器</h5>
+        <p>setInterval | clearInterval</p>
+        <i>
+            var TitleNum = $('h1').text();
+            <br>var TimeStart = setInterval(MyNum ,10);
+            <br>function MyNum() {
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('h1').text(TitleNum+++'%');
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (TitleNum == '101') {
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(TimeStart);
+            <br>}
+            };
+        </i>
+        <mark>var 變數名稱 = <span>setInterval(涵式名稱 ,執行時間)</span>-重複執行的涵式，<span>clearInterval(變數名稱)</span></mark>
+
+        <h5>其他</h5>
+        <p>window.screen.height <b>螢幕解析度高度</b></p>
+        <p>window.screen.width <b>螢幕解析度寬度</b></p>
+        <p>document.body.clientWidthb <b>(頁面可見區域寬)</b></p>
+        <p>document.body.clientHeight <b>(頁面可見區域高，不含工具、書籤列)</b></p>
+        <p>e.screenX e.screenY <b>(滑鼠在螢幕上的X，Y座標)</b></p>
+        <p>e.pageX e.pageY <b>(滑鼠在網頁上的X，Y座標)</b></p>
+        <p>e.clientX e.clinetY <b>(滑鼠在視窗上的X，Y座標)</b></p>
+        <p>typeof(參數) <b>(查詢變數內的描述類型，可能是數字、字串等)</b></p>
+        <p>var FoodNumber = <span>parseInt</span>(document.getElementById('food').value * 50) <b>(將變數類型轉為數值)</b></p>
+    </div>
+</body>
+
+</html>

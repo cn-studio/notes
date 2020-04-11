@@ -1,0 +1,133 @@
+//內間距-----
+//上方
+@mixin p-t($top) {
+    padding-top: $top;
+}
+//右方
+@mixin p-r($right) {
+    padding-right: $right;
+}
+//下方
+@mixin p-b($bottom) {
+    padding-bottom: $bottom;
+}
+//左方
+@mixin p-l($left) {
+    padding-left: $left;
+}
+//x-軸
+@mixin p-x($pl, $pr) {
+    padding-left:$pl;
+    padding-right:$pr;
+}
+//y-軸
+@mixin p-y($pt, $pb) {
+    padding-top:$pt;
+    padding-bottom:$pb;
+}
+
+
+//外間距-----
+//上方
+@mixin m-t($top) {
+    margin-top: $top;
+}
+//右方
+@mixin m-r($right) {
+    margin-right: $right;
+}
+@mixin m-b($bottom) {
+    margin-bottom: $bottom;
+}
+@mixin m-l($left) {
+    margin-left: $left;
+}
+//x-軸
+@mixin m-x($ml, $mr) {
+    margin-left:$ml;
+    margin-right:$mr;
+}
+//y-軸
+@mixin m-y($mt, $mb) {
+    margin-top:$mt;
+    margin-bottom:$mb;
+}
+
+//盒模型-----
+@mixin border-box {
+    box-sizing: border-box;
+}
+
+//定位屬性-----
+//相對定位
+@mixin relative($top, $right, $bottom, $left, $margin) {
+    position: relative;
+    top:$top;
+    left:$left;
+    right:$right;
+    bottom:$bottom;
+    margin:$margin
+}
+
+//絕對定位
+@mixin absolute($top, $right, $bottom, $left, $margin) {
+    position: absolute;
+    top:$top;
+    left:$left;
+    right:$right;
+    bottom:$bottom;
+    margin: $margin;
+}
+
+//固定定位
+@mixin fixed($top, $right, $bottom, $left, $margin) {
+    position: fixed;
+    top:$top;
+    left:$left;
+    right:$right;
+    bottom:$bottom;
+    margin: $margin;
+}
+
+//排版屬性-----
+//橫式
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+//橫式反轉
+@mixin flex-row-r {
+    display: flex;
+    flex-direction: row-reverse;
+}
+//直式
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+//直式反轉
+@mixin flex-col-r {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+//動畫屬性-----
+//旋轉
+@mixin rotate($degree) {
+    transform: rotate($degree)
+}
+
+//縮放
+@mixin scale($n) {
+    transform: scale($n)
+}
+
+//傾斜
+@mixin skew($x, $y) {
+    transform: skew($x, $y)
+}
+
+//位移
+@mixin  translate($x, $y){
+    transform: translate($x, $y);
+}

@@ -10,14 +10,14 @@ $(document).ready(function () {
         $('nav').children('ul').eq(1).children('li').children('a').eq(ListNumber).data('name', DataName).attr('href', Href).text(LinkName);
     }    
     /*產生所有筆記內容*/
-    NotesLink(0, 'Git', '../Notes/Git.html', 'Git');
-    NotesLink(1, 'Css', '../Notes/Css.html', 'Css');
-    NotesLink(2, 'Html', '../Notes/Html.html', 'Html');
-    NotesLink(3, 'SCSS', '../Notes/SCSS.html', 'SCSS');
-    NotesLink(4, 'Sketch', '../Notes/Sketch.html', 'Sketch');
-    NotesLink(5, 'JQuery', '../Notes/JQuery.html', 'JQuery');
-    NotesLink(6, 'Visual Studio Code', '../Notes/VSCode.html', 'VS Code');
-    NotesLink(7, 'Javascript', '../Notes/Javascript.html', 'Javascript');
+    NotesLink(0, 'Git', '../notes/git.html', 'Git');
+    NotesLink(1, 'Css', '../notes/css.html', 'Css');
+    NotesLink(2, 'Html', '../notes/html.html', 'Html');
+    NotesLink(3, 'SCSS', '../notes/scss.html', 'SCSS');
+    NotesLink(4, 'Sketch', '../notes/sketch.html', 'Sketch');
+    NotesLink(5, 'JQuery', '../notes/jquery.html', 'JQuery');
+    NotesLink(6, 'Visual Studio Code', '../notes/vscode.html', 'VS Code');
+    NotesLink(7, 'Javascript', '../notes/javascript.html', 'Javascript');
 
     //判定資料類型
     var TitleName = $('h3').text();

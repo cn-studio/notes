@@ -84,6 +84,10 @@ span{
 .show{
     cursor: pointer;
     display: block;
+    transition: 0.25s linear;
+}
+.show:hover{
+    color: $blue;
 }
 .close-area{
     display: none;

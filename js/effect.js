@@ -31,6 +31,10 @@ $(document).ready(function () {
         }
     }
 
+    $('.show').click(function (e) { 
+        $(this).next('.close-area').slideToggle(1000);
+    });
+
     //展開其他筆記---
     $('.more-btn').click(function (e) { 
         var BtnStatus = $(this).text();
